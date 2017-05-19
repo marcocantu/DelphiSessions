@@ -1,0 +1,4 @@
+let a = TStdAppointment.Create()
+a.At = 'Rome'
+a.Description = 'Delphi Meeting'
+a.ToString

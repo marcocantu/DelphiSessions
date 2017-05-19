@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{1617E570-B01A-4743-97B7-C1F6B0589DFE}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ParallelFor.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ParallelFormMulti.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ParallelFor">
+        <MSBuild Projects="ParallelFor.dproj"/>
+    </Target>
+    <Target Name="ParallelFor:Clean">
+        <MSBuild Projects="ParallelFor.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ParallelFor:Make">
+        <MSBuild Projects="ParallelFor.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ParallelFormMulti">
+        <MSBuild Projects="ParallelFormMulti.dproj"/>
+    </Target>
+    <Target Name="ParallelFormMulti:Clean">
+        <MSBuild Projects="ParallelFormMulti.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ParallelFormMulti:Make">
+        <MSBuild Projects="ParallelFormMulti.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ParallelFor;ParallelFormMulti"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ParallelFor:Clean;ParallelFormMulti:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ParallelFor:Make;ParallelFormMulti:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

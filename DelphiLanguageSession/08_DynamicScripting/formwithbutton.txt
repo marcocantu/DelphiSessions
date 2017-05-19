@@ -1,0 +1,11 @@
+let x = TForm.Create(nil)
+x.Caption = 'Hello there'
+x.FName = 'Foo'
+x.ShowModal
+
+let b = TButton.Create(x)
+b.Parent = x
+b.Caption = 'Click Me!'
+b.ModalResult = 42
+
+x.ShowModal

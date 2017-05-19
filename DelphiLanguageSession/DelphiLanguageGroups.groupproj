@@ -1,0 +1,204 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{B7FDEDE0-6C57-46E1-B131-38CE929F9507}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="01_SmartPointers\SmartPointers.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="02_CovariantReturnTypes\Covariant.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="03_AnonymousCalculatedFields\AnonymousCalculatedFields.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="04_ParallelFor\ParallelFormMulti.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="05_ParallelTasksAndFutures\ParallelTaskAndFutures.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="06_Casting_Interfaces_To_Objects\CastingIntf2Obj.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="07_DescriptionAttribute\DescriptionAttribute.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="08_DynamicScripting\ExternalDsl.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="09_InterceptBaseClass\InterceptBaseClass.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="10_SimpleTypeHelpers\SimpleHelpers.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="11_ArcExperiments\ArcExperiments.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="12_ArcWeakUnsafe\ArcWeakUnsafe.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="13_ClassOperators\ClassOperators.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="14_WeakIntfRef\WeakIntfRef.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="15_DynamicArrays\DynamicArraysVCL.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="SmartPointers">
+        <MSBuild Projects="01_SmartPointers\SmartPointers.dproj"/>
+    </Target>
+    <Target Name="SmartPointers:Clean">
+        <MSBuild Projects="01_SmartPointers\SmartPointers.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SmartPointers:Make">
+        <MSBuild Projects="01_SmartPointers\SmartPointers.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Covariant">
+        <MSBuild Projects="02_CovariantReturnTypes\Covariant.dproj"/>
+    </Target>
+    <Target Name="Covariant:Clean">
+        <MSBuild Projects="02_CovariantReturnTypes\Covariant.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Covariant:Make">
+        <MSBuild Projects="02_CovariantReturnTypes\Covariant.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="AnonymousCalculatedFields">
+        <MSBuild Projects="03_AnonymousCalculatedFields\AnonymousCalculatedFields.dproj"/>
+    </Target>
+    <Target Name="AnonymousCalculatedFields:Clean">
+        <MSBuild Projects="03_AnonymousCalculatedFields\AnonymousCalculatedFields.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AnonymousCalculatedFields:Make">
+        <MSBuild Projects="03_AnonymousCalculatedFields\AnonymousCalculatedFields.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ParallelFormMulti">
+        <MSBuild Projects="04_ParallelFor\ParallelFormMulti.dproj"/>
+    </Target>
+    <Target Name="ParallelFormMulti:Clean">
+        <MSBuild Projects="04_ParallelFor\ParallelFormMulti.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ParallelFormMulti:Make">
+        <MSBuild Projects="04_ParallelFor\ParallelFormMulti.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ParallelTaskAndFutures">
+        <MSBuild Projects="05_ParallelTasksAndFutures\ParallelTaskAndFutures.dproj"/>
+    </Target>
+    <Target Name="ParallelTaskAndFutures:Clean">
+        <MSBuild Projects="05_ParallelTasksAndFutures\ParallelTaskAndFutures.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ParallelTaskAndFutures:Make">
+        <MSBuild Projects="05_ParallelTasksAndFutures\ParallelTaskAndFutures.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CastingIntf2Obj">
+        <MSBuild Projects="06_Casting_Interfaces_To_Objects\CastingIntf2Obj.dproj"/>
+    </Target>
+    <Target Name="CastingIntf2Obj:Clean">
+        <MSBuild Projects="06_Casting_Interfaces_To_Objects\CastingIntf2Obj.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CastingIntf2Obj:Make">
+        <MSBuild Projects="06_Casting_Interfaces_To_Objects\CastingIntf2Obj.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DescriptionAttribute">
+        <MSBuild Projects="07_DescriptionAttribute\DescriptionAttribute.dproj"/>
+    </Target>
+    <Target Name="DescriptionAttribute:Clean">
+        <MSBuild Projects="07_DescriptionAttribute\DescriptionAttribute.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DescriptionAttribute:Make">
+        <MSBuild Projects="07_DescriptionAttribute\DescriptionAttribute.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ExternalDsl">
+        <MSBuild Projects="08_DynamicScripting\ExternalDsl.dproj"/>
+    </Target>
+    <Target Name="ExternalDsl:Clean">
+        <MSBuild Projects="08_DynamicScripting\ExternalDsl.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ExternalDsl:Make">
+        <MSBuild Projects="08_DynamicScripting\ExternalDsl.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="InterceptBaseClass">
+        <MSBuild Projects="09_InterceptBaseClass\InterceptBaseClass.dproj"/>
+    </Target>
+    <Target Name="InterceptBaseClass:Clean">
+        <MSBuild Projects="09_InterceptBaseClass\InterceptBaseClass.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="InterceptBaseClass:Make">
+        <MSBuild Projects="09_InterceptBaseClass\InterceptBaseClass.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SimpleHelpers">
+        <MSBuild Projects="10_SimpleTypeHelpers\SimpleHelpers.dproj"/>
+    </Target>
+    <Target Name="SimpleHelpers:Clean">
+        <MSBuild Projects="10_SimpleTypeHelpers\SimpleHelpers.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SimpleHelpers:Make">
+        <MSBuild Projects="10_SimpleTypeHelpers\SimpleHelpers.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ArcExperiments">
+        <MSBuild Projects="11_ArcExperiments\ArcExperiments.dproj"/>
+    </Target>
+    <Target Name="ArcExperiments:Clean">
+        <MSBuild Projects="11_ArcExperiments\ArcExperiments.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ArcExperiments:Make">
+        <MSBuild Projects="11_ArcExperiments\ArcExperiments.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ArcWeakUnsafe">
+        <MSBuild Projects="12_ArcWeakUnsafe\ArcWeakUnsafe.dproj"/>
+    </Target>
+    <Target Name="ArcWeakUnsafe:Clean">
+        <MSBuild Projects="12_ArcWeakUnsafe\ArcWeakUnsafe.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ArcWeakUnsafe:Make">
+        <MSBuild Projects="12_ArcWeakUnsafe\ArcWeakUnsafe.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ClassOperators">
+        <MSBuild Projects="13_ClassOperators\ClassOperators.dproj"/>
+    </Target>
+    <Target Name="ClassOperators:Clean">
+        <MSBuild Projects="13_ClassOperators\ClassOperators.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ClassOperators:Make">
+        <MSBuild Projects="13_ClassOperators\ClassOperators.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="WeakIntfRef">
+        <MSBuild Projects="14_WeakIntfRef\WeakIntfRef.dproj"/>
+    </Target>
+    <Target Name="WeakIntfRef:Clean">
+        <MSBuild Projects="14_WeakIntfRef\WeakIntfRef.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WeakIntfRef:Make">
+        <MSBuild Projects="14_WeakIntfRef\WeakIntfRef.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="DynamicArraysVCL">
+        <MSBuild Projects="15_DynamicArrays\DynamicArraysVCL.dproj"/>
+    </Target>
+    <Target Name="DynamicArraysVCL:Clean">
+        <MSBuild Projects="15_DynamicArrays\DynamicArraysVCL.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="DynamicArraysVCL:Make">
+        <MSBuild Projects="15_DynamicArrays\DynamicArraysVCL.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="SmartPointers;Covariant;AnonymousCalculatedFields;ParallelFormMulti;ParallelTaskAndFutures;CastingIntf2Obj;DescriptionAttribute;ExternalDsl;InterceptBaseClass;SimpleHelpers;ArcExperiments;ArcWeakUnsafe;ClassOperators;WeakIntfRef;DynamicArraysVCL"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="SmartPointers:Clean;Covariant:Clean;AnonymousCalculatedFields:Clean;ParallelFormMulti:Clean;ParallelTaskAndFutures:Clean;CastingIntf2Obj:Clean;DescriptionAttribute:Clean;ExternalDsl:Clean;InterceptBaseClass:Clean;SimpleHelpers:Clean;ArcExperiments:Clean;ArcWeakUnsafe:Clean;ClassOperators:Clean;WeakIntfRef:Clean;DynamicArraysVCL:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="SmartPointers:Make;Covariant:Make;AnonymousCalculatedFields:Make;ParallelFormMulti:Make;ParallelTaskAndFutures:Make;CastingIntf2Obj:Make;DescriptionAttribute:Make;ExternalDsl:Make;InterceptBaseClass:Make;SimpleHelpers:Make;ArcExperiments:Make;ArcWeakUnsafe:Make;ClassOperators:Make;WeakIntfRef:Make;DynamicArraysVCL:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
