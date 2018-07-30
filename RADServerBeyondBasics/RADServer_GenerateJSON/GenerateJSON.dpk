@@ -1,0 +1,45 @@
+package GenerateJSON;
+
+{$R *.res}
+{$IFDEF IMPLICITBUILDING This IFDEF should not be used by users}
+{$ALIGN 8}
+{$ASSERTIONS ON}
+{$BOOLEVAL OFF}
+{$DEBUGINFO OFF}
+{$EXTENDEDSYNTAX ON}
+{$IMPORTEDDATA ON}
+{$IOCHECKS ON}
+{$LOCALSYMBOLS ON}
+{$LONGSTRINGS ON}
+{$OPENSTRINGS ON}
+{$OPTIMIZATION OFF}
+{$OVERFLOWCHECKS OFF}
+{$RANGECHECKS OFF}
+{$REFERENCEINFO ON}
+{$SAFEDIVIDE OFF}
+{$STACKFRAMES ON}
+{$TYPEDADDRESS OFF}
+{$VARSTRINGCHECKS ON}
+{$WRITEABLECONST OFF}
+{$MINENUMSIZE 1}
+{$IMAGEBASE $400000}
+{$DEFINE DEBUG}
+{$ENDIF IMPLICITBUILDING}
+{$RUNONLY}
+{$IMPLICITBUILD ON}
+
+requires
+  rtl,
+  emsserverapi,
+  dbrtl,
+  FireDACCommonDriver,
+  FireDACCommon,
+  FireDACIBDriver,
+  FireDAC;
+
+contains
+  GenJSON_Writer in 'GenJSON_Writer.pas' {EmployeeResource1: TDataModule},
+  GenJSON_Stream in 'GenJSON_Stream.pas' {EmployeeResource2: TDataModule},
+  GetJSON_FireDAC in 'GetJSON_FireDAC.pas' {EmpfiredacResource1: TDataModule};
+
+end.

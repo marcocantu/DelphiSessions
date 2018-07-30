@@ -1,0 +1,113 @@
+object Form13: TForm13
+  Left = 0
+  Top = 0
+  Caption = 'Form13'
+  ClientHeight = 457
+  ClientWidth = 448
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Button1: TButton
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 112.000000000000000000
+    Position.Y = 24.000000000000000000
+    Size.Width = 113.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 3
+    Text = 'Get Data'
+    TextSettings.Font.Size = 16.000000000000000000
+    OnClick = Button1Click
+  end
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 4
+    Text = 'one'
+    TextSettings.Font.Size = 16.000000000000000000
+    Position.X = 232.000000000000000000
+    Position.Y = 64.000000000000000000
+    Size.Width = 129.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    StyledSettings = [Family, Style, FontColor]
+  end
+  object Label1: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 112.000000000000000000
+    Position.Y = 152.000000000000000000
+    Size.Width = 249.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 16.000000000000000000
+    Text = 'Label1'
+    TabOrder = 8
+  end
+  object Label2: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 112.000000000000000000
+    Position.Y = 192.000000000000000000
+    Size.Width = 249.000000000000000000
+    Size.Height = 17.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 16.000000000000000000
+    Text = 'Label2'
+    TabOrder = 9
+  end
+  object Button2: TButton
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 112.000000000000000000
+    Position.Y = 64.000000000000000000
+    Size.Width = 113.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Text = 'Get Item'
+    TextSettings.Font.Size = 16.000000000000000000
+    OnClick = Button2Click
+  end
+  object Button3: TButton
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 296.000000000000000000
+    Position.Y = 256.000000000000000000
+    Size.Width = 113.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Login'
+    TextSettings.Font.Size = 16.000000000000000000
+    OnClick = Button3Click
+  end
+  object EMSProvider1: TEMSProvider
+    ApiVersion = '1'
+    URLHost = 'localhost'
+    URLPort = 8080
+    Left = 120
+    Top = 296
+  end
+  object BackendEndpoint1: TBackendEndpoint
+    Provider = EMSProvider1
+    Auth = BackendAuth1
+    Params = <>
+    Resource = 'delphi'
+    Left = 120
+    Top = 368
+  end
+  object BackendEndpoint2: TBackendEndpoint
+    Provider = EMSProvider1
+    Params = <>
+    Resource = 'delphi'
+    Left = 264
+    Top = 368
+  end
+  object BackendAuth1: TBackendAuth
+    Provider = EMSProvider1
+    UserName = 'marco'
+    Password = 'marco'
+    LoginPrompt = False
+    UserDetails = <>
+    DefaultAuthentication = Application
+    Left = 344
+    Top = 296
+  end
+end
