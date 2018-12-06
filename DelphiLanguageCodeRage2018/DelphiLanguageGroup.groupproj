@@ -1,0 +1,120 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{E0730A62-B18D-45C0-BCBE-F7D5409371A7}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="01_GenericMethod\GenericMethod.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="02_SmartPointers\SmartPointers.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="03_WeakIntfRef\WeakIntfRef.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="04_InlineVars\InlineVars.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="05_InlineVarSpeed\INlineProj.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="06_MoreTypeInference\MoreTypeInference.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="07_BlockScope\BlockScope.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="07_MissingAttribute\MissingAttribute.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="GenericMethod">
+        <MSBuild Projects="01_GenericMethod\GenericMethod.dproj"/>
+    </Target>
+    <Target Name="GenericMethod:Clean">
+        <MSBuild Projects="01_GenericMethod\GenericMethod.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="GenericMethod:Make">
+        <MSBuild Projects="01_GenericMethod\GenericMethod.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SmartPointers">
+        <MSBuild Projects="02_SmartPointers\SmartPointers.dproj"/>
+    </Target>
+    <Target Name="SmartPointers:Clean">
+        <MSBuild Projects="02_SmartPointers\SmartPointers.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SmartPointers:Make">
+        <MSBuild Projects="02_SmartPointers\SmartPointers.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="WeakIntfRef">
+        <MSBuild Projects="03_WeakIntfRef\WeakIntfRef.dproj"/>
+    </Target>
+    <Target Name="WeakIntfRef:Clean">
+        <MSBuild Projects="03_WeakIntfRef\WeakIntfRef.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WeakIntfRef:Make">
+        <MSBuild Projects="03_WeakIntfRef\WeakIntfRef.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="InlineVars">
+        <MSBuild Projects="04_InlineVars\InlineVars.dproj"/>
+    </Target>
+    <Target Name="InlineVars:Clean">
+        <MSBuild Projects="04_InlineVars\InlineVars.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="InlineVars:Make">
+        <MSBuild Projects="04_InlineVars\InlineVars.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="INlineProj">
+        <MSBuild Projects="05_InlineVarSpeed\INlineProj.dproj"/>
+    </Target>
+    <Target Name="INlineProj:Clean">
+        <MSBuild Projects="05_InlineVarSpeed\INlineProj.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="INlineProj:Make">
+        <MSBuild Projects="05_InlineVarSpeed\INlineProj.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MoreTypeInference">
+        <MSBuild Projects="06_MoreTypeInference\MoreTypeInference.dproj"/>
+    </Target>
+    <Target Name="MoreTypeInference:Clean">
+        <MSBuild Projects="06_MoreTypeInference\MoreTypeInference.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MoreTypeInference:Make">
+        <MSBuild Projects="06_MoreTypeInference\MoreTypeInference.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="BlockScope">
+        <MSBuild Projects="07_BlockScope\BlockScope.dproj"/>
+    </Target>
+    <Target Name="BlockScope:Clean">
+        <MSBuild Projects="07_BlockScope\BlockScope.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="BlockScope:Make">
+        <MSBuild Projects="07_BlockScope\BlockScope.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="MissingAttribute">
+        <MSBuild Projects="07_MissingAttribute\MissingAttribute.dproj"/>
+    </Target>
+    <Target Name="MissingAttribute:Clean">
+        <MSBuild Projects="07_MissingAttribute\MissingAttribute.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="MissingAttribute:Make">
+        <MSBuild Projects="07_MissingAttribute\MissingAttribute.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="GenericMethod;SmartPointers;WeakIntfRef;InlineVars;INlineProj;MoreTypeInference;BlockScope;MissingAttribute"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="GenericMethod:Clean;SmartPointers:Clean;WeakIntfRef:Clean;InlineVars:Clean;INlineProj:Clean;MoreTypeInference:Clean;BlockScope:Clean;MissingAttribute:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="GenericMethod:Make;SmartPointers:Make;WeakIntfRef:Make;InlineVars:Make;INlineProj:Make;MoreTypeInference:Make;BlockScope:Make;MissingAttribute:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
