@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{69E9163C-3CD0-41B0-BECF-B0F029EB910F}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="HighDPIImageList\HighDPIImageList.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="FormWithGrid\WithGrid.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="SystemMetrics\SystemMetrics.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="HighDPIImageList">
+        <MSBuild Projects="HighDPIImageList\HighDPIImageList.dproj"/>
+    </Target>
+    <Target Name="HighDPIImageList:Clean">
+        <MSBuild Projects="HighDPIImageList\HighDPIImageList.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="HighDPIImageList:Make">
+        <MSBuild Projects="HighDPIImageList\HighDPIImageList.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="WithGrid">
+        <MSBuild Projects="FormWithGrid\WithGrid.dproj"/>
+    </Target>
+    <Target Name="WithGrid:Clean">
+        <MSBuild Projects="FormWithGrid\WithGrid.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="WithGrid:Make">
+        <MSBuild Projects="FormWithGrid\WithGrid.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SystemMetrics">
+        <MSBuild Projects="SystemMetrics\SystemMetrics.dproj"/>
+    </Target>
+    <Target Name="SystemMetrics:Clean">
+        <MSBuild Projects="SystemMetrics\SystemMetrics.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SystemMetrics:Make">
+        <MSBuild Projects="SystemMetrics\SystemMetrics.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="HighDPIImageList;WithGrid;SystemMetrics"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="HighDPIImageList:Clean;WithGrid:Clean;SystemMetrics:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="HighDPIImageList:Make;WithGrid:Make;SystemMetrics:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
