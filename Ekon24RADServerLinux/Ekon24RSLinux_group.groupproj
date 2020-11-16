@@ -1,0 +1,60 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{CD1EC6E2-B670-4F72-ADB9-5D8DC899CA44}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="ekon24RSEmployee\ek24rsemployee.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Linux101\linux101.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="ekon24RSEmployee\SimpleClient.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="ek24rsemployee">
+        <MSBuild Projects="ekon24RSEmployee\ek24rsemployee.dproj"/>
+    </Target>
+    <Target Name="ek24rsemployee:Clean">
+        <MSBuild Projects="ekon24RSEmployee\ek24rsemployee.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ek24rsemployee:Make">
+        <MSBuild Projects="ekon24RSEmployee\ek24rsemployee.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="linux101">
+        <MSBuild Projects="Linux101\linux101.dproj"/>
+    </Target>
+    <Target Name="linux101:Clean">
+        <MSBuild Projects="Linux101\linux101.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="linux101:Make">
+        <MSBuild Projects="Linux101\linux101.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SimpleClient">
+        <MSBuild Projects="ekon24RSEmployee\SimpleClient.dproj"/>
+    </Target>
+    <Target Name="SimpleClient:Clean">
+        <MSBuild Projects="ekon24RSEmployee\SimpleClient.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SimpleClient:Make">
+        <MSBuild Projects="ekon24RSEmployee\SimpleClient.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="ek24rsemployee;linux101;SimpleClient"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="ek24rsemployee:Clean;linux101:Clean;SimpleClient:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="ek24rsemployee:Make;linux101:Make;SimpleClient:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

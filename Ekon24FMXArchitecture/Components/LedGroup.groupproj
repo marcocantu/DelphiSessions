@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{D074610C-C367-45B8-852C-E5C94D444DB4}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="CntFireMonkeyComps.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="..\06_LedDemo\LedDemo.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="CntFireMonkeyComps">
+        <MSBuild Projects="CntFireMonkeyComps.dproj"/>
+    </Target>
+    <Target Name="CntFireMonkeyComps:Clean">
+        <MSBuild Projects="CntFireMonkeyComps.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CntFireMonkeyComps:Make">
+        <MSBuild Projects="CntFireMonkeyComps.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="LedDemo">
+        <MSBuild Projects="..\06_LedDemo\LedDemo.dproj"/>
+    </Target>
+    <Target Name="LedDemo:Clean">
+        <MSBuild Projects="..\06_LedDemo\LedDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="LedDemo:Make">
+        <MSBuild Projects="..\06_LedDemo\LedDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="CntFireMonkeyComps;LedDemo"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="CntFireMonkeyComps:Clean;LedDemo:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="CntFireMonkeyComps:Make;LedDemo:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

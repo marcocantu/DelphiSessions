@@ -1,0 +1,146 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Import Condition="Exists('$(BDS)\bin\CodeGear.Deployment.targets')" Project="$(BDS)\bin\CodeGear.Deployment.targets"/>
+    <ProjectExtensions>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <PropertyGroup/>
+    <ItemGroup Condition="'$(Platform)'=='Win64'"/>
+    <ItemGroup Condition="'$(Platform)'=='iOSDevice64'"/>
+    <ItemGroup Condition="'$(Platform)'=='Win32'">
+        <DeployFile Include="C:\Users\Public\Documents\Embarcadero\Studio\21.0\Bpl\ek24rsemployee.bpl" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>ek24rsemployee\</RemoteDir>
+            <RemoteName>ek24rsemployee.bpl</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+    </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='Linux64'">
+        <DeployFile Include="$(BDS)\Redist\Linux64\bplFireDACCommon270.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>ek24rsemployee\</RemoteDir>
+            <RemoteName>bplFireDACCommon270.so</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Linux64\bplrtl270.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>ek24rsemployee\</RemoteDir>
+            <RemoteName>bplrtl270.so</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Linux64\bplxmlrtl270.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>ek24rsemployee\</RemoteDir>
+            <RemoteName>bplxmlrtl270.so</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Linux64\bplemsserverresource270.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>ek24rsemployee\</RemoteDir>
+            <RemoteName>bplemsserverresource270.so</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Linux64\bpldbrtl270.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>ek24rsemployee\</RemoteDir>
+            <RemoteName>bpldbrtl270.so</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Linux64\bplFireDAC270.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>ek24rsemployee\</RemoteDir>
+            <RemoteName>bplFireDAC270.so</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="C:\Users\Public\Documents\Embarcadero\Studio\21.0\Bpl\Linux64\bplek24rsemployee.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>ek24rsemployee\</RemoteDir>
+            <RemoteName>bplek24rsemployee.so</RemoteName>
+            <DeployClass>ProjectOutput</DeployClass>
+            <Operation>1</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Linux64\bplFireDACCommonDriver270.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>ek24rsemployee\</RemoteDir>
+            <RemoteName>bplFireDACCommonDriver270.so</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Linux64\bplFireDACIBDriver270.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>ek24rsemployee\</RemoteDir>
+            <RemoteName>bplFireDACIBDriver270.so</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\Linux64\bplemsserverapi270.so" Condition="'$(Config)'=='Debug'">
+            <RemoteDir>ek24rsemployee\</RemoteDir>
+            <RemoteName>bplemsserverapi270.so</RemoteName>
+            <DeployClass>DependencyPackage</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+            <Required>True</Required>
+        </DeployFile>
+    </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='OSX64'"/>
+    <ItemGroup Condition="'$(Platform)'=='Android'"/>
+    <ItemGroup Condition="'$(Platform)'=='iOSSimulator'">
+        <DeployFile Include="$(BDS)\Redist\iossimulator\libcgunwind.1.0.dylib">
+            <RemoteDir>ek24rsemployee.app\</RemoteDir>
+            <RemoteName>libcgunwind.1.0.dylib</RemoteName>
+            <DeployClass>DependencyModule</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+        <DeployFile Include="$(BDS)\Redist\iossimulator\libpcre.dylib">
+            <RemoteDir>ek24rsemployee.app\</RemoteDir>
+            <RemoteName>libpcre.dylib</RemoteName>
+            <DeployClass>DependencyModule</DeployClass>
+            <Operation>0</Operation>
+            <LocalCommand/>
+            <RemoteCommand/>
+            <Overwrite>True</Overwrite>
+        </DeployFile>
+    </ItemGroup>
+    <ItemGroup Condition="'$(Platform)'=='Android64'"/>
+</Project>

@@ -1,0 +1,19 @@
+object Form19: TForm19
+  Left = 0
+  Top = 0
+  Caption = 'Form19'
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object CntLed1: TCntLed
+    Position.X = 120.000000000000000000
+    Position.Y = 80.000000000000000000
+  end
+  object CntStyledLed1: TCntStyledLed
+    Position.X = 304.000000000000000000
+    Position.Y = 184.000000000000000000
+  end
+end

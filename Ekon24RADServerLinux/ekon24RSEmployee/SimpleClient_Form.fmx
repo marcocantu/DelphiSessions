@@ -1,0 +1,67 @@
+object Form41: TForm41
+  Left = 0
+  Top = 0
+  Caption = 'Form41'
+  ClientHeight = 415
+  ClientWidth = 361
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object BtnInvoke: TButton
+    Position.X = 48.000000000000000000
+    Position.Y = 80.000000000000000000
+    TabOrder = 3
+    Text = 'Invoke'
+    OnClick = BtnInvokeClick
+  end
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Position.X = 48.000000000000000000
+    Position.Y = 128.000000000000000000
+    Size.Width = 249.000000000000000000
+    Size.Height = 273.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 4
+    Viewport.Width = 245.000000000000000000
+    Viewport.Height = 269.000000000000000000
+  end
+  object Edit1: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 5
+    Text = 'localhost'
+    Position.X = 48.000000000000000000
+    Position.Y = 16.000000000000000000
+    Size.Width = 225.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Edit2: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 7
+    Text = '8080'
+    Position.X = 48.000000000000000000
+    Position.Y = 48.000000000000000000
+  end
+  object EMSProvider1: TEMSProvider
+    ApiVersion = '2'
+    URLHost = 'localhost'
+    URLPort = 8080
+    Left = 72
+    Top = 192
+  end
+  object BackendEndpoint1: TBackendEndpoint
+    Provider = EMSProvider1
+    Params = <>
+    Resource = 'ekon24'
+    Response = RESTResponse1
+    Left = 192
+    Top = 64
+  end
+  object RESTResponse1: TRESTResponse
+    ContentType = 'application/json'
+    Left = 296
+    Top = 160
+  end
+end
