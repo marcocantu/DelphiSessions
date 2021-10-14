@@ -10,7 +10,6 @@ object frmCtrlListDemo3: TfrmCtrlListDemo3
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   Position = poScreenCenter
   PixelsPerInch = 96
   TextHeight = 13
@@ -73,7 +72,6 @@ object frmCtrlListDemo3: TfrmCtrlListDemo3
       Alignment = taRightJustify
       Anchors = [akTop, akRight]
       Caption = 'Idx #'
-      ExplicitLeft = 113
     end
   end
   object Panel1: TPanel

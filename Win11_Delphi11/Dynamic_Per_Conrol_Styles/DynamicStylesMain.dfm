@@ -2,23 +2,22 @@ object Form1: TForm1
   Left = 0
   Top = 0
   Caption = 'Changing Per Control Styles at Runtime'
-  ClientHeight = 449
-  ClientWidth = 538
+  ClientHeight = 455
+  ClientWidth = 545
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
   Font.Name = 'Tahoma'
   Font.Style = []
-  OldCreateOrder = False
   OnCreate = FormCreate
   PixelsPerInch = 96
   TextHeight = 13
   object Panel1: TPanel
     Left = 0
     Top = 0
-    Width = 384
-    Height = 430
+    Width = 391
+    Height = 436
     Align = alClient
     BevelOuter = bvNone
     Caption = ' '
@@ -37,7 +36,7 @@ object Form1: TForm1
     object Label2: TLabel
       Left = 0
       Top = 0
-      Width = 384
+      Width = 391
       Height = 25
       Align = alTop
       Alignment = taCenter
@@ -214,18 +213,18 @@ object Form1: TForm1
   end
   object StatusBar1: TStatusBar
     Left = 0
-    Top = 430
-    Width = 538
+    Top = 436
+    Width = 545
     Height = 19
     Panels = <>
     OnDragDrop = Button1DragDrop
     OnDragOver = Button1DragOver
   end
   object Panel2: TPanel
-    Left = 384
+    Left = 391
     Top = 0
     Width = 154
-    Height = 430
+    Height = 436
     Align = alRight
     BevelOuter = bvNone
     Caption = 'Panel2'
@@ -234,7 +233,7 @@ object Form1: TForm1
       Left = 0
       Top = 0
       Width = 154
-      Height = 376
+      Height = 382
       Align = alClient
       DragMode = dmAutomatic
       ItemHeight = 13
@@ -246,7 +245,7 @@ object Form1: TForm1
     end
     object Panel3: TPanel
       Left = 0
-      Top = 376
+      Top = 382
       Width = 154
       Height = 54
       Align = alBottom
