@@ -1,0 +1,67 @@
+object FormBindings: TFormBindings
+  Left = 0
+  Top = 0
+  Caption = 'Bindings101'
+  ClientHeight = 220
+  ClientWidth = 488
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -14
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 17
+  object SpinEdit1: TSpinEdit
+    Left = 41
+    Top = 38
+    Width = 130
+    Height = 27
+    Margins.Left = 2
+    Margins.Top = 2
+    Margins.Right = 2
+    Margins.Bottom = 2
+    MaxValue = 0
+    MinValue = 0
+    TabOrder = 0
+    Value = 20
+    OnChange = SpinEdit1Change
+  end
+  object btnUpdateObj: TButton
+    Left = 41
+    Top = 147
+    Width = 130
+    Height = 23
+    Margins.Left = 2
+    Margins.Top = 2
+    Margins.Right = 2
+    Margins.Bottom = 2
+    Caption = 'btnUpdateObj'
+    TabOrder = 1
+    OnClick = btnUpdateObjClick
+  end
+  object edName: TEdit
+    Left = 41
+    Top = 102
+    Width = 382
+    Height = 25
+    Margins.Left = 2
+    Margins.Top = 2
+    Margins.Right = 2
+    Margins.Bottom = 2
+    TabOrder = 2
+    Text = 'edName'
+  end
+  object ProgressBar1: TProgressBar
+    Left = 205
+    Top = 38
+    Width = 120
+    Height = 25
+    Margins.Left = 2
+    Margins.Top = 2
+    Margins.Right = 2
+    Margins.Bottom = 2
+    TabOrder = 3
+  end
+end

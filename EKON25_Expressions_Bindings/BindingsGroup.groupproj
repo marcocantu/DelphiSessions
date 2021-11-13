@@ -1,0 +1,168 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{2943CB5F-058D-4C3B-A6F3-3E282BBFDEAD}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="01_RttiAccess\RttiAccess.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="02_Bindings101\Bindings101.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="02_CurrencyConverter\CurrencyConverter.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="03_BindingExpressions\BindingExpressions.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="03_BindingsExpr\BindingsExpr.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="04_BindindList101\BindindList101.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="03_SimpleVCLLiveBindingsExample\SimpleVCLLiveBindingsExample.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="04_BindingsList\BindingsList.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="05_LiveBindings101\LiveBindings101.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="06_BindingsDB\BindingsDB.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="07_TListViewObjects\VLBDemo_VCLListView_Objs1.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="08_ControlListLiveBinding\ControlListLiveBindingDemo.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="RttiAccess">
+        <MSBuild Projects="01_RttiAccess\RttiAccess.dproj"/>
+    </Target>
+    <Target Name="RttiAccess:Clean">
+        <MSBuild Projects="01_RttiAccess\RttiAccess.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="RttiAccess:Make">
+        <MSBuild Projects="01_RttiAccess\RttiAccess.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Bindings101">
+        <MSBuild Projects="02_Bindings101\Bindings101.dproj"/>
+    </Target>
+    <Target Name="Bindings101:Clean">
+        <MSBuild Projects="02_Bindings101\Bindings101.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Bindings101:Make">
+        <MSBuild Projects="02_Bindings101\Bindings101.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CurrencyConverter">
+        <MSBuild Projects="02_CurrencyConverter\CurrencyConverter.dproj"/>
+    </Target>
+    <Target Name="CurrencyConverter:Clean">
+        <MSBuild Projects="02_CurrencyConverter\CurrencyConverter.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CurrencyConverter:Make">
+        <MSBuild Projects="02_CurrencyConverter\CurrencyConverter.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="BindingExpressions">
+        <MSBuild Projects="03_BindingExpressions\BindingExpressions.dproj"/>
+    </Target>
+    <Target Name="BindingExpressions:Clean">
+        <MSBuild Projects="03_BindingExpressions\BindingExpressions.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="BindingExpressions:Make">
+        <MSBuild Projects="03_BindingExpressions\BindingExpressions.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="BindingsExpr">
+        <MSBuild Projects="03_BindingsExpr\BindingsExpr.dproj"/>
+    </Target>
+    <Target Name="BindingsExpr:Clean">
+        <MSBuild Projects="03_BindingsExpr\BindingsExpr.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="BindingsExpr:Make">
+        <MSBuild Projects="03_BindingsExpr\BindingsExpr.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="BindindList101">
+        <MSBuild Projects="04_BindindList101\BindindList101.dproj"/>
+    </Target>
+    <Target Name="BindindList101:Clean">
+        <MSBuild Projects="04_BindindList101\BindindList101.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="BindindList101:Make">
+        <MSBuild Projects="04_BindindList101\BindindList101.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SimpleVCLLiveBindingsExample">
+        <MSBuild Projects="03_SimpleVCLLiveBindingsExample\SimpleVCLLiveBindingsExample.dproj"/>
+    </Target>
+    <Target Name="SimpleVCLLiveBindingsExample:Clean">
+        <MSBuild Projects="03_SimpleVCLLiveBindingsExample\SimpleVCLLiveBindingsExample.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SimpleVCLLiveBindingsExample:Make">
+        <MSBuild Projects="03_SimpleVCLLiveBindingsExample\SimpleVCLLiveBindingsExample.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="BindingsList">
+        <MSBuild Projects="04_BindingsList\BindingsList.dproj"/>
+    </Target>
+    <Target Name="BindingsList:Clean">
+        <MSBuild Projects="04_BindingsList\BindingsList.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="BindingsList:Make">
+        <MSBuild Projects="04_BindingsList\BindingsList.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="LiveBindings101">
+        <MSBuild Projects="05_LiveBindings101\LiveBindings101.dproj"/>
+    </Target>
+    <Target Name="LiveBindings101:Clean">
+        <MSBuild Projects="05_LiveBindings101\LiveBindings101.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="LiveBindings101:Make">
+        <MSBuild Projects="05_LiveBindings101\LiveBindings101.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="BindingsDB">
+        <MSBuild Projects="06_BindingsDB\BindingsDB.dproj"/>
+    </Target>
+    <Target Name="BindingsDB:Clean">
+        <MSBuild Projects="06_BindingsDB\BindingsDB.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="BindingsDB:Make">
+        <MSBuild Projects="06_BindingsDB\BindingsDB.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="VLBDemo_VCLListView_Objs1">
+        <MSBuild Projects="07_TListViewObjects\VLBDemo_VCLListView_Objs1.dproj"/>
+    </Target>
+    <Target Name="VLBDemo_VCLListView_Objs1:Clean">
+        <MSBuild Projects="07_TListViewObjects\VLBDemo_VCLListView_Objs1.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="VLBDemo_VCLListView_Objs1:Make">
+        <MSBuild Projects="07_TListViewObjects\VLBDemo_VCLListView_Objs1.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ControlListLiveBindingDemo">
+        <MSBuild Projects="08_ControlListLiveBinding\ControlListLiveBindingDemo.dproj"/>
+    </Target>
+    <Target Name="ControlListLiveBindingDemo:Clean">
+        <MSBuild Projects="08_ControlListLiveBinding\ControlListLiveBindingDemo.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ControlListLiveBindingDemo:Make">
+        <MSBuild Projects="08_ControlListLiveBinding\ControlListLiveBindingDemo.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="RttiAccess;Bindings101;CurrencyConverter;BindingExpressions;BindingsExpr;BindindList101;SimpleVCLLiveBindingsExample;BindingsList;LiveBindings101;BindingsDB;VLBDemo_VCLListView_Objs1;ControlListLiveBindingDemo"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="RttiAccess:Clean;Bindings101:Clean;CurrencyConverter:Clean;BindingExpressions:Clean;BindingsExpr:Clean;BindindList101:Clean;SimpleVCLLiveBindingsExample:Clean;BindingsList:Clean;LiveBindings101:Clean;BindingsDB:Clean;VLBDemo_VCLListView_Objs1:Clean;ControlListLiveBindingDemo:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="RttiAccess:Make;Bindings101:Make;CurrencyConverter:Make;BindingExpressions:Make;BindingsExpr:Make;BindindList101:Make;SimpleVCLLiveBindingsExample:Make;BindingsList:Make;LiveBindings101:Make;BindingsDB:Make;VLBDemo_VCLListView_Objs1:Make;ControlListLiveBindingDemo:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
