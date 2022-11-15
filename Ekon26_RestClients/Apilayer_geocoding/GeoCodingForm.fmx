@@ -1,0 +1,298 @@
+object Form41: TForm41
+  Left = 0
+  Top = 0
+  Caption = 'GeoCoding Demo'
+  ClientHeight = 568
+  ClientWidth = 597
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Grid1: TGrid
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    CanFocus = True
+    ClipChildren = True
+    Position.X = 24.000000000000000000
+    Position.Y = 120.000000000000000000
+    Size.Width = 532.000000000000000000
+    Size.Height = 353.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 7
+    RowCount = 0
+    Viewport.Width = 528.000000000000000000
+    Viewport.Height = 328.000000000000000000
+  end
+  object edLocation: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 8
+    Position.X = 24.000000000000000000
+    Position.Y = 80.000000000000000000
+    Size.Width = 361.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Button1: TButton
+    Position.X = 472.000000000000000000
+    Position.Y = 34.000000000000000000
+    Size.Width = 84.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 10
+    Text = 'Fetch'
+    OnClick = Button1Click
+  end
+  object Label1: TLabel
+    Position.X = 24.000000000000000000
+    Position.Y = 64.000000000000000000
+    Text = 'Location'
+    TabOrder = 11
+  end
+  object Label2: TLabel
+    Position.X = 24.000000000000000000
+    Position.Y = 16.000000000000000000
+    Text = 'Access Key'
+    TabOrder = 12
+    object edKey: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      TabOrder = 4
+      Position.Y = 18.000000000000000000
+      Size.Width = 361.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+    end
+  end
+  object RESTClient1: TRESTClient
+    Accept = 'application/json, text/plain; q=0.9, text/html;q=0.8,'
+    AcceptCharset = 'utf-8, *;q=0.8'
+    BaseURL = 'http://api.positionstack.com/v1'
+    Params = <>
+    SynchronizedEvents = False
+    Left = 528
+    Top = 296
+  end
+  object RESTRequest1: TRESTRequest
+    AssignedValues = [rvConnectTimeout, rvReadTimeout]
+    Client = RESTClient1
+    Params = <
+      item
+        Name = 'access_key'
+      end
+      item
+        Name = 'query'
+      end>
+    Resource = 'forward'
+    Response = RESTResponse1
+    SynchronizedEvents = False
+    Left = 528
+    Top = 368
+  end
+  object RESTResponse1: TRESTResponse
+    ContentType = 'application/json'
+    RootElement = 'data'
+    Left = 528
+    Top = 448
+  end
+  object RESTResponseDataSetAdapter1: TRESTResponseDataSetAdapter
+    Active = True
+    Dataset = FDMemTable1
+    FieldDefs = <>
+    Response = RESTResponse1
+    TypesMode = Rich
+    NestedElements = True
+    Left = 528
+    Top = 512
+  end
+  object FDMemTable1: TFDMemTable
+    Active = True
+    FieldDefs = <
+      item
+        Name = 'latitude'
+        DataType = ftFloat
+      end
+      item
+        Name = 'longitude'
+        DataType = ftFloat
+      end
+      item
+        Name = 'type'
+        DataType = ftWideString
+        Size = 8
+      end
+      item
+        Name = 'name'
+        DataType = ftWideString
+        Size = 8
+      end
+      item
+        Name = 'number'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'postal_code'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'street'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'confidence'
+        DataType = ftFloat
+      end
+      item
+        Name = 'region'
+        DataType = ftWideString
+        Size = 8
+      end
+      item
+        Name = 'region_code'
+        DataType = ftWideString
+        Size = 2
+      end
+      item
+        Name = 'county'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'locality'
+        DataType = ftWideString
+        Size = 8
+      end
+      item
+        Name = 'administrative_area'
+        DataType = ftWideString
+        Size = 8
+      end
+      item
+        Name = 'neighbourhood'
+        DataType = ftWideString
+        Size = 255
+      end
+      item
+        Name = 'country'
+        DataType = ftWideString
+        Size = 5
+      end
+      item
+        Name = 'country_code'
+        DataType = ftWideString
+        Size = 3
+      end
+      item
+        Name = 'continent'
+        DataType = ftWideString
+        Size = 6
+      end
+      item
+        Name = 'label'
+        DataType = ftWideString
+        Size = 19
+      end>
+    IndexDefs = <>
+    FetchOptions.AssignedValues = [evMode]
+    FetchOptions.Mode = fmAll
+    ResourceOptions.AssignedValues = [rvSilentMode]
+    ResourceOptions.SilentMode = True
+    UpdateOptions.AssignedValues = [uvUpdateChngFields, uvUpdateMode, uvLockMode, uvLockPoint, uvLockWait, uvRefreshMode, uvFetchGeneratorsPoint, uvCheckRequired, uvCheckReadOnly, uvCheckUpdatable]
+    UpdateOptions.LockWait = True
+    UpdateOptions.FetchGeneratorsPoint = gpNone
+    UpdateOptions.CheckRequired = False
+    StoreDefs = True
+    Left = 400
+    Top = 520
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = FDMemTable1
+    ScopeMappings = <>
+    Left = 280
+    Top = 520
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 172
+    Top = 517
+    object LinkGridToDataSourceBindSourceDB12: TLinkGridToDataSource
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      GridControl = Grid1
+      Columns = <
+        item
+          MemberName = 'latitude'
+          Width = 50
+        end
+        item
+          MemberName = 'longitude'
+          Width = 50
+        end
+        item
+          MemberName = 'type'
+          Width = 50
+        end
+        item
+          MemberName = 'name'
+          Width = 50
+        end
+        item
+          MemberName = 'number'
+          Width = 50
+        end
+        item
+          MemberName = 'postal_code'
+          Width = 50
+        end
+        item
+          MemberName = 'street'
+          Width = 50
+        end
+        item
+          MemberName = 'confidence'
+          Width = 50
+        end
+        item
+          MemberName = 'region'
+          Width = 50
+        end
+        item
+          MemberName = 'region_code'
+          Width = 50
+        end
+        item
+          MemberName = 'county'
+          Width = 50
+        end
+        item
+          MemberName = 'locality'
+          Width = 50
+        end
+        item
+          MemberName = 'administrative_area'
+          Width = 50
+        end
+        item
+          MemberName = 'neighbourhood'
+          Width = 50
+        end
+        item
+          MemberName = 'country'
+          Width = 50
+        end
+        item
+          MemberName = 'country_code'
+          Width = 50
+        end
+        item
+          MemberName = 'continent'
+          Width = 50
+        end
+        item
+          MemberName = 'label'
+          Width = 50
+        end>
+    end
+  end
+end

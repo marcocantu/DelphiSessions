@@ -1,0 +1,74 @@
+object Form13: TForm13
+  Left = 0
+  Top = 0
+  Caption = 'Weather'
+  ClientHeight = 306
+  ClientWidth = 397
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object BtnRefresh: TButton
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 104.000000000000000000
+    Position.Y = 32.000000000000000000
+    Size.Width = 169.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    Text = 'Refresh'
+    TextSettings.Font.Size = 20.000000000000000000
+    OnClick = BtnRefreshClick
+  end
+  object EditCurrent: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 1
+    ReadOnly = True
+    Text = '31'
+    TextSettings.Font.Size = 20.000000000000000000
+    Position.X = 104.000000000000000000
+    Position.Y = 176.000000000000000000
+    Size.Width = 169.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    StyledSettings = [Family, Style, FontColor]
+  end
+  object EditLocation: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 2
+    Text = 'Piacenza, Italy'
+    TextSettings.Font.Size = 22.000000000000000000
+    Position.X = 104.000000000000000000
+    Position.Y = 104.000000000000000000
+    Size.Width = 169.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    StyledSettings = [Family, Style, FontColor]
+  end
+  object BindSourceDB1: TBindSourceDB
+    DataSet = DataModule14.FDMemTable1
+    ScopeMappings = <>
+    Left = 16
+    Top = 40
+  end
+  object BindingsList1: TBindingsList
+    Methods = <>
+    OutputConverters = <>
+    Left = 20
+    Top = 5
+    object LinkControlToField1: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = DataModule14.RESTRequest1
+      FieldName = 'Params.query'
+      Control = EditLocation
+      Track = False
+    end
+    object LinkControlToField2: TLinkControlToField
+      Category = 'Quick Bindings'
+      DataSource = BindSourceDB1
+      FieldName = 'temperature'
+      Control = EditCurrent
+      Track = False
+    end
+  end
+end
