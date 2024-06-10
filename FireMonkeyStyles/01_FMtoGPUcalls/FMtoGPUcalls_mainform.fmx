@@ -1,0 +1,12 @@
+object FormFMtoGPU: TFormFMtoGPU
+  Left = 0
+  Top = 0
+  Caption = 'FMtoGPUcalls'
+  ClientHeight = 234
+  ClientWidth = 778
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop, iPhone, iPad]
+  OnPaint = FormPaint
+  DesignerMasterStyle = 0
+end

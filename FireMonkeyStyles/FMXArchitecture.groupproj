@@ -1,0 +1,108 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{6B985E57-7EC1-48C5-90B2-7E3CC39AB872}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="01_FMtoGPUcalls\FMtoGPUcalls.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="02_CanvasPaint\CanvasPaint.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="03_PrimitivePaint\PrimitivePaint.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="04_ButtonStyle\ButtonStyle.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="05_FMStyles101\FMStyles101.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="07_PlatformServices\PlatformDialog.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="08_PlatformControls\PlatformControls.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="FMtoGPUcalls">
+        <MSBuild Projects="01_FMtoGPUcalls\FMtoGPUcalls.dproj"/>
+    </Target>
+    <Target Name="FMtoGPUcalls:Clean">
+        <MSBuild Projects="01_FMtoGPUcalls\FMtoGPUcalls.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FMtoGPUcalls:Make">
+        <MSBuild Projects="01_FMtoGPUcalls\FMtoGPUcalls.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="CanvasPaint">
+        <MSBuild Projects="02_CanvasPaint\CanvasPaint.dproj"/>
+    </Target>
+    <Target Name="CanvasPaint:Clean">
+        <MSBuild Projects="02_CanvasPaint\CanvasPaint.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="CanvasPaint:Make">
+        <MSBuild Projects="02_CanvasPaint\CanvasPaint.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PrimitivePaint">
+        <MSBuild Projects="03_PrimitivePaint\PrimitivePaint.dproj"/>
+    </Target>
+    <Target Name="PrimitivePaint:Clean">
+        <MSBuild Projects="03_PrimitivePaint\PrimitivePaint.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PrimitivePaint:Make">
+        <MSBuild Projects="03_PrimitivePaint\PrimitivePaint.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="ButtonStyle">
+        <MSBuild Projects="04_ButtonStyle\ButtonStyle.dproj"/>
+    </Target>
+    <Target Name="ButtonStyle:Clean">
+        <MSBuild Projects="04_ButtonStyle\ButtonStyle.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="ButtonStyle:Make">
+        <MSBuild Projects="04_ButtonStyle\ButtonStyle.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="FMStyles101">
+        <MSBuild Projects="05_FMStyles101\FMStyles101.dproj"/>
+    </Target>
+    <Target Name="FMStyles101:Clean">
+        <MSBuild Projects="05_FMStyles101\FMStyles101.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="FMStyles101:Make">
+        <MSBuild Projects="05_FMStyles101\FMStyles101.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PlatformDialog">
+        <MSBuild Projects="07_PlatformServices\PlatformDialog.dproj"/>
+    </Target>
+    <Target Name="PlatformDialog:Clean">
+        <MSBuild Projects="07_PlatformServices\PlatformDialog.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PlatformDialog:Make">
+        <MSBuild Projects="07_PlatformServices\PlatformDialog.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="PlatformControls">
+        <MSBuild Projects="08_PlatformControls\PlatformControls.dproj"/>
+    </Target>
+    <Target Name="PlatformControls:Clean">
+        <MSBuild Projects="08_PlatformControls\PlatformControls.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="PlatformControls:Make">
+        <MSBuild Projects="08_PlatformControls\PlatformControls.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="FMtoGPUcalls;CanvasPaint;PrimitivePaint;ButtonStyle;FMStyles101;PlatformDialog;PlatformControls"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="FMtoGPUcalls:Clean;CanvasPaint:Clean;PrimitivePaint:Clean;ButtonStyle:Clean;FMStyles101:Clean;PlatformDialog:Clean;PlatformControls:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="FMtoGPUcalls:Make;CanvasPaint:Make;PrimitivePaint:Make;ButtonStyle:Make;FMStyles101:Make;PlatformDialog:Make;PlatformControls:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>

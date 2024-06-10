@@ -1,0 +1,40 @@
+object CanvasPaintForm: TCanvasPaintForm
+  Left = 0
+  Top = 0
+  Caption = 'CanvasPaint'
+  ClientHeight = 383
+  ClientWidth = 786
+  FormFactor.Width = 1280
+  FormFactor.Height = 1024
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object PaintBox1: TPaintBox
+    Position.X = 16.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 753.000000000000000000
+    Size.Height = 161.000000000000000000
+    Size.PlatformDefault = False
+    OnPaint = PaintBox1Paint
+  end
+  object Label1: TLabel
+    Position.X = 16.000000000000000000
+    Position.Y = 184.000000000000000000
+    Size.Width = 753.000000000000000000
+    Size.Height = 177.000000000000000000
+    Size.PlatformDefault = False
+    Text = 'Label1'
+    TabOrder = 1
+    OnPaint = Label1Paint
+  end
+  object Button1: TButton
+    Position.X = 296.000000000000000000
+    Position.Y = 240.000000000000000000
+    Size.Width = 137.000000000000000000
+    Size.Height = 41.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Button1'
+    TextSettings.Trimming = None
+    OnClick = Button1Click
+  end
+end
